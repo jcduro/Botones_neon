@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Botones Neón</title>
+  <style>
+    body {
+      background: #0a0a0a;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      min-height: 100vh;
+    }
+
+    button {
+      border: none;
+      color: white;
+      font-size: 18px;
+      padding: 14px 36px;
+      cursor: pointer;
+      position: relative;
+      transition: 0.3s;
+      border-radius: 6px;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    /* COLORES NEÓN */
+    .cyan { --clr: #00ffe1; }
+    .pink { --clr: #ff00f7; }
+    .green { --clr: #00ff85; }
+    .yellow { --clr: #ffea00; }
+
+    /* 1. Brillo simple */
+    .btn1 {
+      border: 2px solid var(--clr);
+      box-shadow: 0 0 10px var(--clr);
+    }
+    .btn1:hover {
+      background: var(--clr);
+      color: #000;
+      box-shadow: 0 0 25px var(--clr);
+    }
+
+    /* 2. Glow interno */
+    .btn2 {
+      border: 2px solid var(--clr);
+      box-shadow: inset 0 0 15px var(--clr);
+    }
+    .btn2:hover {
+      background: var(--clr);
+      color: #000;
+      box-shadow: 0 0 25px var(--clr), inset 0 0 25px var(--clr);
+    }
+
+    /* 3. Borde animado */
+    .btn3 {
+      border: 2px solid transparent;
+      background: linear-gradient(#0a0a0a, #0a0a0a) padding-box,
+                  linear-gradient(45deg, var(--clr), transparent) border-box;
+      box-shadow: 0 0 10px var(--clr);
+    }
+    .btn3:hover {
+      box-shadow: 0 0 25px var(--clr);
+      transform: scale(1.05);
+    }
+
+    /* 4. Glow pulsante */
+    .btn4 {
+      border: 2px solid var(--clr);
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 10px var(--clr); }
+      50% { box-shadow: 0 0 25px var(--clr); }
+    }
+
+    /* 5. Fondo en transición */
+    .btn5 {
+      border: 2px solid var(--clr);
+      background: linear-gradient(90deg, transparent 50%, var(--clr) 50%);
+      background-size: 200%;
+      transition: background-position 0.4s;
+    }
+    .btn5:hover {
+      background-position: -100%;
+      color: #000;
+    }
+
+    /* 6. Rotación 3D (nuevo) */
+    .btn6 {
+      border: 2px solid var(--clr);
+      perspective: 500px;
+    }
+    .btn6:hover {
+      transform: rotateY(360deg);
+      background: var(--clr);
+      color: #000;
+      box-shadow: 0 0 25px var(--clr);
+    }
+
+    /* 7. Ondulación (nuevo) */
+    .btn7 {
+      border: 2px solid var(--clr);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn7::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: var(--clr);
+      opacity: 0.6;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      transition: 0.5s;
+    }
+    .btn7:hover::after {
+      width: 300%;
+      height: 300%;
+    }
+
+    /* 8. Texto con resplandor */
+    .btn8 {
+      border: 2px solid var(--clr);
+      text-shadow: 0 0 8px var(--clr);
+    }
+    .btn8:hover {
+      box-shadow: 0 0 25px var(--clr);
+    }
+
+    /* 9. Contorno cambiante */
+    .btn9 {
+      border: 2px dashed var(--clr);
+    }
+    .btn9:hover {
+      border-style: solid;
+      background: var(--clr);
+      color: #000;
+    }
+
+    /* 10. Halo */
+    .btn10 {
+      border: 2px solid var(--clr);
+    }
+    .btn10:hover {
+      box-shadow: 0 0 10px var(--clr), 0 0 40px var(--clr);
+    }
+
+    /* 11. Lluvia de brillo (nuevo) */
+    .btn11 {
+      border: 2px solid var(--clr);
+      background: rgba(255,255,255,0.05);
+      overflow: hidden;
+    }
+    .btn11::before {
+      content: "";
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 300%;
+      background: linear-gradient(180deg, transparent, var(--clr), transparent);
+      animation: shine 2s linear infinite;
+    }
+    @keyframes shine {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(100%); }
+    }
+
+
+/* 12. Borde líquido amarillo */
+.btn12 {
+  border: 2px solid var(--clr);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: transparent;
+  transition: 0.4s;
+}
+
+.btn12::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: linear-gradient(120deg, transparent, var(--clr), transparent);
+  background-size: 200% 100%;
+  z-index: -1;
+  animation: flow 2s linear infinite;
+}
+
+.btn12:hover {
+  background: var(--clr);
+  color: #000;
+  box-shadow: 0 0 25px var(--clr);
+}
+
+@keyframes flow {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <button class="btn1 cyan">Botón 1</button>
+  <button class="btn2 pink">Botón 2</button>
+  <button class="btn3 green">Botón 3</button>
+  <button class="btn4 yellow">Botón 4</button>
+  <button class="btn5 cyan">Botón 5</button>
+  <button class="btn6 pink">Botón 6</button>
+  <button class="btn7 green">Botón 7</button>
+  <button class="btn8 yellow">Botón 8</button>
+  <button class="btn9 cyan">Botón 9</button>
+  <button class="btn10 pink">Botón 10</button>
+  <button class="btn11 green">Botón 11</button>
+  <button class="btn12 yellow">Botón 12</button>
+
+</body>
+</html>
