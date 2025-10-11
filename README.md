@@ -7,7 +7,7 @@ Cada botón tiene un estilo y animación distinta: brillos, bordes dinámicos, o
 
 ## ✨ Vista previa
 
-![Botones Neon Preview](preview.png)
+![Botones Neon Preview](preview.gif)
 
 > **
 
