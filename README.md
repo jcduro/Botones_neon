@@ -28,6 +28,13 @@ Cada botón tiene un estilo y animación distinta: brillos, bordes dinámicos, o
 
 ---
 
+## 📊 Lenguajes y Herramientas
+
+[![My Skills](https://skillicons.dev/icons?i=html,css,github,vscode,windows,&theme=light&perline=8)](https://skillicons.dev)
+
+
+---
+
 ## 🚀 Cómo usarlo localmente
 
 1. Clona el repositorio:
