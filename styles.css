@@ -23,19 +23,18 @@
       min-height: 100vh;
     }
 
-/************ HEADER ************/
-header {
-background: transparent;
-
-  color: #ffffff;
-  padding: 20px;
-  text-align: center;
-  border: 1px solid #00bfff;
-  border-radius: 14px;
-  box-shadow: 0 0 25px rgba(0, 191, 255, 0.5);
-  margin: 20px;
-}
-
+     /************ HEADER ************/
+     header {
+     background: transparent;
+     height: 140px;
+       color: var(--text-color);
+       padding: 20px;
+       text-align: center;
+       border: 1px solid var(--neon-blue);
+       border-radius: 14px;
+       box-shadow: 0 0 25px rgba(0, 191, 255, 0.5);
+       margin: 20px;
+     }
 
     button {
       border: none;
