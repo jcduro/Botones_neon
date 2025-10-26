@@ -5,36 +5,50 @@
  \   | |      |   | |   | __ <  |   |  
 \___/ \____| ____/ \___/ _| \_\\___/   
                                        
-  ___|  _ \  __ \  ____|   _ )   _ _| __ \  ____|    \     ___|  
+  ___|  _ \  __ \  ____|    _ )   _ _| __ \  ____|    \     ___|  
  |     |   | |   | __|     _ \ \   |  |   | __|     _ \  \___ \  
  |     |   | |   | |      ( `  <   |  |   | |      ___ \       | 
 \____|\___/ ____/ _____| \___/\/ ___|____/ _____|_/    _\_____/  
 
------------------------------------------------------------------------------------------------- */
-    body {
-      background: #0a0a0a;
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      min-height: 100vh;
-    }
+  https://jcduro.bexartideas.com/index.php | 2025 | JC Duro Code & Ideas
 
-     /************ HEADER ************/
-     header {
-     background: transparent;
-     height: 140px;
-       color: var(--text-color);
-       padding: 20px;
-       text-align: center;
-       border: 1px solid var(--neon-blue);
-       border-radius: 14px;
-       box-shadow: 0 0 25px rgba(0, 191, 255, 0.5);
-       margin: 20px;
-     }
+------------------------------------------------------------------------------------------------ */
+  /* Reseteo básico para evitar margenes extra */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 540px; /* Deja espacio al contenido para el header fijo */
+  text-align: center;
+  justify-content: center;
+  background: #000000;
+}
+
+/* Header fijo arriba, ancho completo y con alto definido */
+header {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed; /* Pegado en la pantalla siempre */
+  top: 0;          /* Arriba */
+  left: 0;
+  right: 0;
+  height: 140px;   /* Ajusta según altura de tu contenido */
+  padding: 10px 20px;
+  color: #fff;
+  text-align: center;
+  border: 1px solid #00bfff;
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 1000;    /* Para que quede encima de otros elementos */
+}
+
+
 
     button {
       border: none;
